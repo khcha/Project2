@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Plotlyjs Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>San Francisco Employee Salary Data</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+                <p>By: Aaron Morgan, David Romaine, Kevin Cha, Marcell Walker, Nahielys La Fontaine</p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <input type="button" value="Gender Gap" onclick="window.location.href='/genderSalaryPage'" />
+                <input type="button" value="Job Title Salaries" onclick="window.location.href='/jobTitlePage'" />
+                <input type="button" value="Base vs Overtime Pay" onclick="window.location.href='/baseOvertimePage'" />
+            </div>
+        </div>
+        <div class="row">
+            <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-538096543_medium.jpg" height="500px" width="1200px" />
+        </div>
+    </div>
+
+    <!-- <script src=" https://cdn.plot.ly/plotly-1.31.2.min.js "></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js "></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+</body>
+
+</html>

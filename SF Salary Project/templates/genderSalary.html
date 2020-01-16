@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Plotlyjs Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>San Francisco Employee Salary Data</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+                <p>By: Aaron Morgan, David Romaine, Kevin Cha, Marcell Walker, Nahielys La Fontaine</p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <input type="button" value="Home" onclick="window.location.href='/'" />
+                <input type="button" value="Job Title Salaries" onclick="window.location.href='/jobTitlePage'" />
+                <input type="button" value="Base vs Overtime Pay" onclick="window.location.href='/baseOvertimePage'" />
+            </div>
+        </div>
+        <div class="row">
+            <select id="years">
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+            </select>
+        </div>
+        <div id="gif" style="display: hidden;">
+            <img src="https://media.giphy.com/media/3oFyD4xKncK6ptR7qg/giphy.gif" width="1200" height="500" />
+        </div>
+        <div id="graphs">
+            <div class="row">
+                <div id="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
